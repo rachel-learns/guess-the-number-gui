@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.guessthenumbergui.controller.HelloController" >
+
+    <Label fx:id="welcomeText" text="Welcome in Guess The Number!" alignment="CENTER"/>
+
+    <Button fx:id="startButton" text="Start" onAction="#onStartBtnClick" alignment="CENTER"/>
+
+</VBox>

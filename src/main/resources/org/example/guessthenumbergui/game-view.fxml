@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="container" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.guessthenumbergui.controller.GameController"
+      prefHeight="400.0" prefWidth="600.0" spacing="10" alignment="CENTER">
+
+    <Text fx:id="textNbrRound" text="Round 1"/>
+    <Label text="Enter a number between 0 and 100 : "/>
+    <TextField fx:id="textUserInput" maxWidth="100" />
+    <Button fx:id="btnConfirm" text="Confirm" onAction="#onConfirmBtnClick"/>
+
+    <Text fx:id="textHint" />
+    <Text fx:id="textScore" />
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnNext" text="Next Round" visible="false" managed="false" onAction="#handleNext"/>
+        <Button fx:id="btnStop" text="End Game" visible="false" managed="false" onAction="#handleStop"/>
+    </HBox>
+
+    <Button fx:id="btnFinalScore" text="Click to see your final score" visible="false" managed="false" onAction="#handleStop"/>
+
+</VBox>

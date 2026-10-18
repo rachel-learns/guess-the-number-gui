@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.guessthenumbergui.controller.EndController"
+      prefHeight="400.0" prefWidth="600.0" spacing="20" alignment="CENTER">
+
+    <Text fx:id="textFinalScore"/>
+    <Text text="End of the game !"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnQuit" text="Quit" onAction="#onQuitBtnClick"/>
+        <Button fx:id="btnRestart" text="Restart" onAction="#onRestartBtnClick"/>
+    </HBox>
+
+</VBox>
