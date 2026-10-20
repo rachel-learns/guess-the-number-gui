@@ -57,11 +57,10 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example.guessthenumbergui/org.example.guessthenumbergui.Launcher
-                            </mainClass>
-                            <launcher>app</launcher>
-                            <jlinkZipName>app</jlinkZipName>
-                            <jlinkImageName>app</jlinkImageName>
+                            <mainClass>org.example.guessthenumbergui.Launcher</mainClass>
+                            <launcher>guess-the-number-gui</launcher>
+                            <jlinkZipName>guess-the-number-gui-app</jlinkZipName>
+                            <jlinkImageName>guess-the-number-gui-app</jlinkImageName>
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
                             <noHeaderFiles>true</noHeaderFiles>

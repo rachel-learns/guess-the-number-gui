@@ -7,7 +7,7 @@
 <VBox fx:id="container" xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.example.guessthenumbergui.controller.GameController"
-      prefHeight="400.0" prefWidth="600.0" spacing="10" alignment="CENTER">
+      prefHeight="400.0" prefWidth="600.0" spacing="20" alignment="CENTER">
 
     <Text fx:id="textNbrRound" text="Round 1"/>
     <Label text="Enter a number between 0 and 100 : "/>
@@ -18,10 +18,10 @@
     <Text fx:id="textScore" />
 
     <HBox spacing="10" alignment="CENTER">
-        <Button fx:id="btnNext" text="Next Round" visible="false" managed="false" onAction="#handleNext"/>
-        <Button fx:id="btnStop" text="End Game" visible="false" managed="false" onAction="#handleStop"/>
+        <Button fx:id="btnNext" text="Next Round" visible="false" managed="false" onAction="#onNextBtnClick"/>
+        <Button fx:id="btnStop" text="End Game" visible="false" managed="false" onAction="#onStopBtnClick"/>
     </HBox>
 
-    <Button fx:id="btnFinalScore" text="Click to see your final score" visible="false" managed="false" onAction="#handleStop"/>
+    <Button fx:id="btnFinalScore" text="Click to see your final score" visible="false" managed="false" onAction="#onStopBtnClick"/>
 
 </VBox>

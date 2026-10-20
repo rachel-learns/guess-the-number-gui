@@ -5,6 +5,7 @@ import javafx.beans.property.StringProperty;
 
 import java.util.Random;
 
+
 public class RoundModel {
     private final StringProperty number = new SimpleStringProperty();
     private final int solutionNumber = generateRandomNumber(0, 100);
@@ -22,15 +23,33 @@ public class RoundModel {
     public int getScore() { return score; }
     public void setScore(int value) { score = value; }
 
+    /**
+     * Generates a random number between a minimum bound and a maximum
+     * bound.
+     *
+     * @param min the minimum bound.
+     * @param max the maximum bound.
+     * @return the generated number.
+     */
     public int generateRandomNumber(int min, int max) {
         Random rand = new Random();
         return rand.nextInt(min, max);
     }
 
+    /**
+     * Compares two numbers.
+     *
+     * @return a number indicating if number is equal, smaller or bigger
+     * than solutionNumber.
+     *
+     */
     public int compareNumber() {
         return Integer.compare(Integer.parseInt(getNumber()), solutionNumber);
     }
 
+    /**
+     * Updates min and max as user enters numbers.
+     */
     public void boundsHint() {
         int userNumber = Integer.parseInt(getNumber());
         if(userNumber <= solutionNumber && userNumber > min) {
@@ -41,6 +60,12 @@ public class RoundModel {
         }
     }
 
+    /**
+     * Builds the hint message by comparing the user inputs and the
+     * solution number.
+     *
+     * @return the hint message.
+     */
     public String messageHint() {
         String msgHint = "";
         nbrLeftAttempts--;
@@ -63,6 +88,12 @@ public class RoundModel {
         return msgHint;
     }
 
+    /**
+     * Calculates the score of the round based on the number of
+     * left attempts.
+     *
+     * @return the score of the round.
+     */
     public int scoreRound() {
         int score;
 
@@ -78,7 +109,11 @@ public class RoundModel {
         return score;
     }
 
-    // Change the score message at the end of the round
+    /**
+     * Builds the score message and updates the score.
+     *
+     * @return the score message.
+     */
     public String messageScore() {
         String msgScore;
 
@@ -93,7 +128,11 @@ public class RoundModel {
         return msgScore;
     }
 
-    // Return true if the round is finished
+    /**
+     * Checks if the round is finished.
+     *
+     * @return true if the round is finished, false otherwise.
+     */
     public boolean endRound() {
         return (numberIsFound || nbrLeftAttempts == 0);
     }
