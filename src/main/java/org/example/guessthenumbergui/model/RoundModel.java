@@ -8,8 +8,8 @@ import java.util.Random;
 
 public class RoundModel {
     private final StringProperty number = new SimpleStringProperty();
-    private final int solutionNumber = generateRandomNumber(0, 100);
 
+    private int solutionNumber = generateRandomNumber(0, 100);
     private int score = 0;
     private boolean numberIsFound = false;
     private int nbrLeftAttempts = 5;
@@ -20,8 +20,18 @@ public class RoundModel {
     public String getNumber() { return number.get(); }
     public void setNumber(String value) { number.set(value); }
 
+    public void setSolutionNumber(int value) { solutionNumber = value; }
+
     public int getScore() { return score; }
     public void setScore(int value) { score = value; }
+
+    public void setNumberIsFound(boolean value) { numberIsFound = value; }
+
+    public void setNbrLeftAttempts(int value) { nbrLeftAttempts = value; }
+
+    public int getMin() { return min; }
+
+    public int getMax() { return max; }
 
     /**
      * Generates a random number between a minimum bound and a maximum

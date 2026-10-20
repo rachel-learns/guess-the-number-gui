@@ -9,6 +9,9 @@ public class GameModel {
 
     public void setFinalScore(int value) { finalScore = finalScore + value; }
 
+    public int getNbrRounds() { return nbrRounds; }
+    public void setNbrRounds(int value) { nbrRounds = value; }
+
     /**
      * Creates a round.
      *
