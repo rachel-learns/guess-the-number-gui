@@ -7,7 +7,7 @@ This is a **mini-game** where the user has to guess a number randomly generated 
 ## 📝 Description
 
 This game has been developed with **IntelliJ IDEA** based on the **MVC architecture**
-and has a gaphic interface.
+and has a gaphical user interface.
 
 ### 🎯 Game's goal
 
@@ -34,13 +34,14 @@ At each attempt, the program indicates if the entered number is :
 
 ### 📌 Features
 
-| Feature               | Description                                  |
-|-----------------------|----------------------------------------------|
-| **Random generation** | Number between 0 and 100.                    |
-| **Multi-games**       | Endless opportunities to start over.         |
-| **Limited attempts**  | 5 attempts per round.                        |
-| **Multi-rounds**      | Up to 3 rounds, with the choice to continue. |
-| **Score system**      | Based on the number of attempts.             |
+| Feature               | Description                                              |
+|-----------------------|----------------------------------------------------------|
+| **Random generation** | Number between 0 and 100.                                |
+| **Limited attempts**  | 5 attempts per round.                                    |
+| **Multi-rounds**      | Up to 3 rounds, with the choice to continue.             |
+| **Score system**      | Based on the number of attempts.                         |
+| **Restart button**    | Endless opportunities to start over.                     |
+| **JavaFX GUI**        | Intuitive interface to play without touching a terminal. |
  
 ---
 
@@ -79,6 +80,20 @@ At each attempt, the program indicates if the entered number is :
 
 ---
 
+## 🧪 Tests
+
+The game logic is covered by unit tests (JUnit 6) :
+
+- The random number generation (`generateRandomNumberTest`)
+- The comparison logic (`compareNumberTest`).
+- The calculation of the score (`scoreRoundTest`).
+- The messages displayed (`messageHintTest`, `messageScoreTest`, `finalMessageScoreTest`).
+- The end of a round and a game (`endRoundTest`, `endGameTest`).
+
+Run them with : `mvn test`
+
+---
+
 ## 📁 Project structure
 
 ### 🧩 Structure
@@ -87,22 +102,27 @@ At each attempt, the program indicates if the entered number is :
 guess-the-number-gui/
 |---src/
 |   |---main/
+|   |   |---java/
+|   |   |   |---module-info.java
+|   |   |   |---org/example/guessthenumbergui
+|   |   |       |---Launcher.java
+|   |   |       |---controller
+|   |   |       |   |---EndController.java
+|   |   |       |   |---GameController.java
+|   |   |       |   |---HelloController.java
+|   |   |       |---model
+|   |   |           |---GameModel.java
+|   |   |           |---RoundModel.java
+|   |   |---resources/
+|   |       |---org/example/guessthenumbergui
+|   |           |---end-view.fxml
+|   |           |---game-view.fxml
+|   |           |---hello-view.fxml
+|   |---test/
 |       |---java/
-|       |   |---module-info.java
-|       |   |---org/example/guessthenumbergui
-|       |       |---Launcher.java
-|       |       |---controller
-|       |       |   |---EndController.java
-|       |       |   |---GameController.java
-|       |       |   |---HelloController.java
-|       |       |---model
-|       |           |---GameModel.java
-|       |           |---RoundModel.java
-|       |---resources/
 |           |---org/example/guessthenumbergui
-|               |---end-view.fxml
-|               |---game-view.fxml
-|               |---hello-view.fxml
+|               |---GameModelUnitTest.java
+|               |---RoundModelUnitTest.java
 |---pom.xml
 |---README.md
 ```
