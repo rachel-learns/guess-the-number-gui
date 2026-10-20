@@ -45,10 +45,6 @@ At each attempt, the program indicates if the entered number is :
  
 ---
 
-## 🎮 Demo
-
----
-
 ## 🛠 Technologies
 
 - **Language** : Java.
@@ -74,9 +70,9 @@ At each attempt, the program indicates if the entered number is :
 
 ### No prerequisites
 
-1. Download the zip file in the GitHub Releases section.
-2. Unzip it.
-3. Double-click on the .exe file in the bin/ folder.
+Download and extract [guess-the-number-gui-app.zip](https://github.com/rachel-learns/guess-the-number-gui/releases/download/v1.0.0/guess-the-number-gui-app.zip), then :
+- **Windows** : double-click `bin/guess-the-number-gui.bat`
+- **Linux/macOS** : run `bin/guess-the-number-gui` on a terminal
 
 ---
 
